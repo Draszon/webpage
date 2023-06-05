@@ -1,0 +1,105 @@
+:root {
+    /* --main-bg-color:            hsl(0, 0%, 95%); */
+    --main-bg-color:            linear-gradient(45deg, hsl(204, 80%, 60%) 20%, hsl(163, 80%, 60%) 80%);
+    --fonts-background-color:   hsl(210, 80%, 47%);
+    --font-color:               hsl(209, 82%, 9%);
+    --font:                     'Ubuntu', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family:        var(--font);
+    background:         var(--main-bg-color);
+    color:              var(--font-color);
+    height:             100vh;
+}
+
+.title {
+    text-align:         center;
+    padding:            1.875rem 0;
+    font-size:          3.125rem;
+    text-transform:     uppercase;
+    letter-spacing:     0.625rem;
+    font-weight:        700;
+}
+
+.category { 
+    text-align: center;
+    font-size:  1.25rem;
+}
+
+.letters {
+    text-align:         center;
+    padding:            3.125rem;
+    letter-spacing:     0.625rem;
+    font-size:          1.25rem;
+}
+
+.abc {
+    text-transform:     uppercase;
+    font-weight:        bold;
+    padding:            0.9375rem;
+    display:            flex;
+    flex-direction:     row;
+    flex-wrap:          wrap;
+    justify-content:    center;
+    font-size:          1.25rem;
+    background-color:   hsla(0, 0%, 100%, 0.281);
+    border-radius:      0.625rem;
+    margin:             5px 0;
+}
+
+@media (min-width: 1440px) {
+    .abc {
+        margin: 1.875rem auto;
+        width: 37.5rem;
+    }
+}
+
+.abc span { 
+    cursor:             pointer;
+    margin:             0.3125rem 0.3125rem;
+    background-color:   hsl(0, 0%, 95%);
+    border:             0.0625rem solid black;
+    border-radius:      0.3125rem;
+    width:              2.3rem;
+    height:             2.3rem;
+    display:            flex;
+    justify-content:    center;
+    align-items:        center;
+    transition:         .2s;
+    box-shadow:         0.125rem 0.125rem 0.3125rem 0.0625rem hsla(0, 0%, 0%, 0.58);
+}
+
+.abc span:hover {
+    background-color:   hsla(0, 0%, 0%, 0.322);
+    border:             0.0625rem solid white;
+    color:              hsl(0, 0%, 90%);
+    transition:         .2s;
+}
+
+.hangman-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hangman-wrapper img { height: 250px; }
+
+.new-btn  { text-align: center; }
+
+.new-btn p {
+    width:              6.25rem;
+    margin:             auto;
+    background-color:   hsl(0, 0%, 90%);
+    padding:            0.3125rem 0;
+    border:             1px solid hsl(0, 0%, 50%);
+    border-radius:      0.3125rem;
+    cursor:             pointer;
+    transition:         .2s;
+}
+
+.new-btn p:hover {
+    background-color:   hsl(0, 0%, 80%);
+    transition:         .2s;
+}

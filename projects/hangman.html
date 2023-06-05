@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33e91eb866.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/hangman.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 class="title">akasztófa</h1>
+        </header>
+
+        <section class="letters-section">
+            <div class="letter-wrapper">
+                <div class="category">
+                    <p>A ketegória: <span id="category-span"></span></p>
+                </div>
+                <div class="letters"></div>
+                <div class="new-btn">
+                    <p id="new-game-btn">Új játék</p>
+                </div>
+                <div class="abc" id="abc"></div>
+            </div>
+        </section>
+
+        <section class="hangman-section">
+            <div class="hangman-wrapper">
+                <img id="hangman-img" src="">
+            </div>
+        </section>
+    </main>
+    
+    <script src="hangman.js"></script>
+</body>
+</html>

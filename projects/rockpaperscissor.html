@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33e91eb866.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/rockpaperscissor.css">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    
+<main>
+    <h1 class="page-title">KŐ PAPÍR OLLÓ</h1>
+    <div class="score-wrapper">
+        <div class="player-score scoreboard">
+            <h2>Játékos</h2>
+        </div>
+
+        <div class="score">
+            <span class="score-font" id="player-score">0</span>
+            <span class="score-font">:</span>
+            <span class="score-font" id="pc-score">0</span>
+        </div>
+            
+        <div class="pc-score scoreboard">
+            <h2>PC</h2>
+        </div>
+    </div>
+
+
+    <div class="selection">
+        <i class="fa-solid fa-hand-back-fist icons" id="pc-rock"></i>
+        <i class="fa-solid fa-hand icons" id="pc-paper"></i>
+        <i class="fa-solid fa-hand-scissors icons" id="pc-scissor"></i>
+    </div>
+
+    <div class="result-text" id="result"><span></span></div>
+    
+    <div class="selection">
+        <i class="fa-solid fa-hand-back-fist icons player-icons" id="player-rock"></i>
+        <i class="fa-solid fa-hand icons player-icons" id="player-paper"></i>
+        <i class="fa-solid fa-hand-scissors icons player-icons" id="player-scissor"></i>
+    </div>
+</main>
+
+<script src="rockpaperscissor.js"></script>
+</body>
+</html>
