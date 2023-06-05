@@ -37,7 +37,7 @@ const year = date.getFullYear();
 const month = date.getMonth();
 const day = date.getDate();
 
-const ageCounter = (year, month, day) => {
+const ageCounter = function(year, month, day) {
   const myAge = year - 1994;
   if (month < 6) {
     return myAge - 1;
