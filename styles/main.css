@@ -1,16 +1,18 @@
 /*VAR*/
 
 :root {
-  --mian-bg:          hsl(230, 21%, 11%);
-  --tech-light-bg:      hsl(230, 225%, 20%);  
+  --mian-bg:          hsl(228, 18%, 11%);
   --section-light-bg: hsl(0, 0%, 90%);
   --font-light-color: hsl(0, 0%, 90%);
   --font-dark-color:  hsl(0, 0%, 12%);
   --menu-bg-color:    hsl(183, 100%, 13%);
+  --technologies-bg:  hsl(229, 22%, 20%);
 }
 
 /***********/
 
+
+/*GLOBAL*/
 
 * { box-sizing: border-box; }
 
@@ -30,13 +32,26 @@ a {
 }
 
 h1 {font-size: 1.5rem;}
-h2 {font-size: 1.375rem;}
+h2 {font-size: 35px;}
 h3 {font-size: 1.25rem;}
 
+section {padding: 3.125rem 0;}
+
+.section-title {
+  margin-bottom: 6.25rem;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*********/
 
 /*HEADER*/
 
 header {
+  z-index:          1;
   height:           60px;
   width:            100vw;
   position:         fixed;
@@ -47,8 +62,8 @@ header {
   justify-content:  space-between;
   padding:          0rem 1.875rem;
   border-bottom:    2px solid hsl(229, 21%, 16%);
-  background-color: hsla(230, 21%, 11%, 0.438);
-  backdrop-filter:  blur(3px);
+  background-color: hsla(230, 21%, 11%, 0.7);
+  backdrop-filter:  blur(5px);
 }
 
 .logo {
@@ -84,10 +99,9 @@ header {
 
 .introduction-wrapper {
   height:           100vh;
-  width:            100vw;
   display:          flex;
   flex-direction:   row;
-  flex-wrap:        nowrap;
+  flex-wrap:        wrap;
 }
 
 .logo-wrapper {
@@ -98,26 +112,166 @@ header {
 }
 
 .introduction-text {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 50px;
+  width:            60%;
+  display:          flex;
+  flex-direction:   column;
+  flex-wrap:        nowrap;
+  justify-content:  center;
+  align-items:      center;
+  padding:          0 3.125rem;
 }
 
 .main-title { 
-  font-size: 45px;
-  margin-bottom: 40px;
+  font-size:      1.875rem;
+  margin-bottom:  2.5rem;
+  text-align:     center;
 }
 
 .introduction { 
-  font-size: 20px;
-  text-align: center;
-  margin: 15px 0;
-  width: 60%;
-  line-height: 25px;
+  font-size:    1.125rem;
+  text-align:   center;
+  margin:       0.625rem 0;
+  width:        60%;
+  line-height:  1.5625rem;
 }
 
 /**************/
+
+
+/*PROJECTS*/
+ 
+.website-projects {
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  space-evenly;
+}
+
+.projects-wrapper-img {
+  width:          500px;
+  border-radius:  10px;
+  margin-bottom:  1.875rem;
+}
+
+.gerthrud-wrapper, .taltos-wrapper {
+  display:        flex;
+  flex-direction: column;
+  text-align:     center;
+}
+
+.js-projects {
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  center;
+  margin-top:       3.125rem;
+  color:            var(--font-dark-color);
+  background-color: var(--section-light-bg);
+}
+
+.js-projects-wrapper { position: relative; }
+
+.arrow {
+  position:     absolute;
+  top:          110px;
+  width:        40px; 
+  cursor:       pointer;
+  transition:   width .2s;
+}
+
+.left { left: 50px }
+.right { right: 50px }
+
+.arrow:hover {
+  width:      45px;
+  transition: width .2s;
+}
+.card { width: 150px; }
+
+.js-projects { padding: 3.125rem 0; }
+
+.js-projects-wrapper {
+  margin-top:       3.125rem;
+  width:            40%;
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  center;
+}
+
+.project {
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  padding:          3.125rem;
+  border-radius:    10px;
+  box-shadow:       0 0 18px hsl(0, 0%, 50%);
+}
+
+.project-title {
+  color:        var(--font-dark-color);
+  margin:       1.25rem 0;
+  font-size:    1.25rem;
+  font-weight:  500;
+}
+
+.project-description { line-height: 23px; }
+
+/**********/
+
+/*TECHNOLOGY*/
+
+.technology-wrapper {
+  height:           100vh;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  flex-direction:   column;
+  background-image: linear-gradient(hsl(228, 18%, 11%), hsl(229, 22%, 20%), hsl(228, 18%, 11%));
+}
+
+.tech-introduction-wrapper {
+  padding:          1.25rem;
+  width:            9.0625rem;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  flex-direction:   column;
+  background-color: var(--section-light-bg);
+  border-radius:    999px;
+  color:            var(--font-dark-color);
+  font-weight:      500;
+  text-transform:   uppercase;
+}
+
+.tech-introduction-wrapper img { height:80px; }
+
+.tech-logo-wrapper {
+  width:            70%;
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  space-evenly;
+}
+
+.tech-description { padding-top: 0.625rem; }
+
+/************/
+
+/*CONTACTS*/
+
+.contact-wrapper {
+  position: relative
+}
+
+.contact-title {
+  background-color: var(--section-light-bg);
+  color: var(--font-dark-color);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  height: 50px;
+}
+
+/**********/
