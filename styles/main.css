@@ -257,17 +257,36 @@ header {
 
 /*CONTACTS*/
 
-.contact-wrapper {
-  position: relative
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: -30px 10px;
 }
+
+.contacts a p { color: var(--font-dark-color); }
 
 .contact-title {
   background-color: var(--section-light-bg);
   color: var(--font-dark-color);
-  height: 200px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 90px;
+}
+
+.contact-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 150px;
+  width: 15%;
+  background-color: var(--section-light-bg);
+  border-radius: 10px;
+  box-shadow: 5px -5px 15px hsla(0, 0%, 0%, 11%);
 }
 
 .social-icon {
