@@ -258,39 +258,66 @@ header {
 /*CONTACTS*/
 
 .contacts {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: -30px 10px;
+  display:          flex;
+  flex-direction:   row;
+  justify-content:  center;
+  margin:           -6.25rem 0.625rem;
 }
 
 .contacts a p { color: var(--font-dark-color); }
 
 .contact-title {
-  background-color: var(--section-light-bg);
-  color: var(--font-dark-color);
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 90px;
+  background-color:   var(--section-light-bg);
+  color:              var(--font-dark-color);
+  height:             15.625rem;
+  display:            flex;
+  justify-content:    center;
+  align-items:        center;
+  padding-bottom:     5.625rem;
+}
+
+.contact-name {
+  font-weight:      600;
+  text-transform:   uppercase;
+  margin:           1.25rem 0 0.625rem 0;
 }
 
 .contact-icon-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  height: 150px;
-  width: 15%;
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  center;
+  align-items:      center;
+  margin:           0 40px;
+  padding:          1.25rem;
+  height:           11.875rem;
+  width:            12.5rem;
   background-color: var(--section-light-bg);
-  border-radius: 10px;
-  box-shadow: 5px -5px 15px hsla(0, 0%, 0%, 11%);
+  border-radius:    10px;
+  box-shadow:       5px -5px 15px hsla(0, 0%, 0%, 15%);
+  transition:       all .2s;
 }
 
-.social-icon {
-  height: 50px;
+.contact-icon-wrapper:hover {
+  box-shadow:   5px -5px 15px 5px hsla(0, 0%, 0%, 20%);
+  transition:   all .2s;
 }
+
+.social-icon { height: 3.125rem; }
 
 /**********/
+
+/*FOOTER*/
+
+footer {
+  margin-top:       9.375rem;
+  height:           3.75rem;
+  display:          flex;
+  justify-content:  center;
+  align-items:      center;
+}
+
+/********/
+
+@media (min-width: 1024) {
+
+}
