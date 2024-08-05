@@ -91,7 +91,7 @@ header {
 
 .pc-menu a:hover { 
   border-bottom:  1px solid var(--font-light-color);
-  color:          hsl(0, 0%, 74%);
+  color:          hsl(0, 0%, 61%);
   transition:     color .3s;
 }
 
