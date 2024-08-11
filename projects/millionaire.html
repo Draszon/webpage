@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/millionaire.css">
+    <script src="https://kit.fontawesome.com/33e91eb866.js" crossorigin="anonymous"></script>
+    <title>Legyen ön is milliomos!</title>
+</head>
+<body>
+
+<header>
+    <div class="index-img">
+        <img src="assets/millionaire/logo.png" alt="legyen ön is milliomos fejléc kép" width="200px">
+    </div>
+</header>
+
+<main>
+    <section class="question-section">
+        <div class="question-wrapper tagline" id="question">
+            
+        </div>
+    </section>
+
+    <section class="answer-section">
+        <div class="answer-wrapper" id="answ-wrapper">
+            <div class="answer-first-row">
+                <p class="answer" id="A"></p>
+                <p class="answer" id="C"></p>
+            </div>
+            <div class="answer-second-row">
+                <p class="answer" id="B"></p>
+                <p class="answer" id="D"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="helps-section">
+        <div class="helps-wrapper">
+            <div class="half helps" id="help-half">
+                <p >50:50</p>
+            </div>
+            <div class="phone helps" id="help-phone">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="audience helps" id="help-audience">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="money-and-audience-section">
+        <div class="money-audience-wrapper">
+            <div class="money-wrapper">
+                <p id="eighth">8. 500 000 Ft</p>
+                <p id="seventh">7. 300 000 Ft</p>
+                <p id="sixth">6. 200 000 Ft</p>
+                <p id="fifth">5. 100 000 Ft</p>
+                <p id="fourth">4. 50 000 Ft</p>
+                <p id="third">3. 25 000 Ft</p>
+                <p id="second">2. 10 000 Ft</p>
+                <p id="first">1. 5 000 Ft</p>
+            </div>
+            <div class="audience-help-wrapper" id="audience-wrapper">
+                <div class="progress">
+                    <label for="file">A</label>
+                    <progress id="valueA" value="" max="100"></progress>
+                </div>
+                <div class="progress">
+                    <label for="file">B</label>
+                    <progress id="valueB" value="" max="100"></progress>
+                </div>
+                <div class="progress">
+                    <label for="file">C</label>
+                    <progress id="valueC" value="" max="100"></progress>
+                </div>
+                <div class="progress">
+                    <label for="file">D</label>
+                    <progress id="valueD" value="" max="100"></progress>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="millionaire.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/blackjack.css" type="text/css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Blackjack</h1>
+        </div>
+        <div class="field-wrapper">
+            <div class="computer-cards">
+                <img class="cards pc-card1" id="pc1" src="">
+                <img class="cards pc-card2" id="pc2" src="">
+            </div>
+            <span>A gép száma:</span>
+            <span id="pc-score-display"></span>
+            
+            <div class="cards-wrapper">
+                <div class="deck cards"><img id="card0" src="assets/cards_back.png" width="100px"></div>
+                <div class="cards field-cards card0" ><img id="card1" src="" width="100px"></div>
+                <div class="cards field-cards" ><img id="card2" src="" width="100px"></div>
+                <div class="cards field-cards" ><img id="card3" src="" width="100px"></div>
+                <div class="cards field-cards" ><img id="card4" src="" width="100px"></div>
+            </div>
+            <span id="player-score-display"></span>
+            <span id="win-loose"></span>
+            <div class="player-cards">
+                <img class="cards player-card1" id="player1" src="">
+                <img class="cards player-card2" id="player2" src="">
+            </div>
+            
+            <button id="stop">Megállok</button>
+            <button id="new-game">Új játék</button>
+        </div>
+    </div>
+    <script src="blackjack.js"></script>
+</body>
+</html>

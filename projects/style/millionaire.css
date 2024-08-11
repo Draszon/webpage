@@ -1,0 +1,121 @@
+/* VARIABLES */
+
+:root {
+    --background-color-light-blue:  hsl(206, 100%, 24%);
+    --background-color-dark-blue:   hsl(206, 100%, 15%);
+    --main-font:                    'Ubuntu', sans-serif;
+}
+
+/*****************************************/
+
+* { box-sizing: border-box; }
+
+body { 
+    background:     linear-gradient(90deg, var(--background-color-dark-blue) 0%, var(--background-color-light-blue) 50%);
+    font-family:    var(--main-font);
+    color:          white;
+}
+
+header {
+    width:      100%;
+    padding:    1.875rem 0;
+}
+
+.index-img { text-align: center; }
+
+.question-section { margin: 0 0.9375rem 0.9375rem 0.9375rem; }
+
+.question-wrapper {
+    padding:            0.625rem;
+    text-align:         center;
+    border:             0.125rem solid hsl(0, 0%, 87%);
+    border-radius:      1.875rem;
+}
+
+.answer-wrapper {
+    display:            flex;
+    flex-direction:     row;
+    flex-wrap:          wrap;
+    justify-content:    space-between;
+    padding:            0.625rem;
+}
+
+.answer-first-row, .answer-second-row { width: 50%; }
+
+.answer {
+    display:        flex;
+    align-items:    center;
+    width:          100%;
+    height:         4.375rem;
+    border:         2px solid hsl(0, 0%, 87%);
+    border-radius:  1.875rem;
+    padding:        0.625rem;
+    margin:         0 0.625rem 0.625rem 0;
+    transition:     .2s;
+}
+
+.answer:hover {
+    cursor:             pointer;
+    background-color:   orange;
+    color:              black;
+    border:             2px solid hsl(0, 0%, 30%);
+    transition:         .2s;
+}
+
+.helps-wrapper {
+    display:            flex;
+    flex-direction:     row;
+    justify-content:    space-between;
+    width:              50%;
+    margin:             1.875rem auto;
+}
+
+.helps {
+    border:         2px solid hsl(0, 0%, 87%);
+    padding:        0.4375rem;
+    border-radius:  1.875rem;
+}
+
+.helps:hover {cursor: pointer;}
+
+.money-audience-wrapper {
+    display:            flex;
+    flex-direction:     row;
+    padding:            0 1.875rem;
+    justify-content:    space-between;
+}
+
+.money-wrapper p { 
+    margin:         0.3125rem 0;
+    color:          orange;
+    font-weight:    bold;
+    padding:        0.1875rem;
+}
+
+.progress { margin-bottom: 1.25rem; }
+
+.audience-help-wrapper { 
+    display: none;
+    transition: .2s;
+}
+
+@media (min-width: 1440px) {
+    .question-wrapper {
+        width:      50%;
+        margin:     0.9375rem auto;
+    }
+
+    .answer-wrapper {
+        width:  80vw;
+        margin: 0 auto;
+    }
+
+    .answer { width: 90%; }
+
+    .helps-wrapper { width: 20%; }
+
+    .money-audience-wrapper {
+        width:  40%;
+        margin: 0 auto;
+    }
+}
