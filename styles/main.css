@@ -10,8 +10,6 @@
   --menu-bottom-color:hsl(229, 19%, 17%);
 }
 
-/***********/
-
 
 /*GLOBAL*/
 
@@ -87,6 +85,8 @@ header {
   font-weight:      600;
   font-size:        1.125rem;
 }
+
+.main-logo { height: 500px; }
 
 .pc-menu  {
   display:        flex;
@@ -285,8 +285,24 @@ footer {
 
 .footer-content { font-size: 0.875rem; }
 
-/*@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}*/
+@media (max-width: 1024px) {
+  .main-page { justify-content: center; }
+  .main-logo { display: none !important; }
+  .container { max-width: 94%; }
+  .contact-wrapper { gap: 20px; }
+}
+
+@media (max-width: 768px) {
+  .projects-wrapper { gap: 20px; }
+  .js-projects-wrapper { width: 80%; }
+  .technology-img { width: 50%; }
+}
+
+@media (max-width: 425px) {
+  .welcome-wrapper { text-align: center; }
+  .js-projects-wrapper { width: 100%; }
+  .technologies-wrapper { gap: 20px; }
+  .technology-img { width: 80%; }
+  .webpage-index { width: 94%; }
+  .section-title { line-height: 40px; }
+}
