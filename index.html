@@ -25,7 +25,20 @@
       <a href="#tech">Technológiák</a>
       <a href="#contacts">Elérhetőségek</a>
     </nav>
+    <div class="mobile-menu-btn">
+      <img class="menu-open" id="mobile-nav-open" src="/assets/images/menu-open.svg" alt="menü nyitó gomb">
+      <img class="menu-close" id="mobile-nav-close" src="/assets/images/menu-close.svg" alt="menü záró gomb">
+    </div>
   </header>
+
+  <nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="menu-item" href="#main-page">Főoldal</a>
+      <a class="menu-item" href="#projects">Projektek</a>
+      <a class="menu-item" href="#tech">Technológiák</a>
+      <a class="menu-item" href="#contacts">Elérhetőségek</a>
+    </div>
+  </nav>
 
   <main>
     <section id="main-page">
@@ -76,13 +89,13 @@
         <h2 class="section-title">Projektjeim</h2>
         <div class="row projects-wrapper">
           <div class="parkhotel-wrapper">
-            <a href="https://parkhotel-taltos.com">
+            <a href="https://parkhotel-taltos.com" target=”_blank”>
               <img class="webpage-index" src="/assets/images/taltos.png" alt="parkhotel táltos indexkép">
               <p class="website">parkhotel-taltos.com</p>
             </a>
           </div>
           <div class="gerthrud-wrapper">
-            <a href="https://gerthrud.com">
+            <a href="https://gerthrud.com" target=”_blank”>
               <img class="webpage-index" src="/assets/images/gerthrud.png" alt="gerthrud indexkép">
               <p class="website">gerthrud.com</p>
             </a>
@@ -96,22 +109,13 @@
         <h2 class="section-title">JavaScript projektek</h2>
         <div class="row js">
           <div class="js-projects-wrapper">
-            <img class="arrow arrow-left" src="/assets/images/arrow-left.svg" alt="balra nyíl">
+            <img class="arrow arrow-left" id="game-minus" src="/assets/images/arrow-left.svg" alt="balra nyíl">
             <div class="actual-jsproject">
-              <a href="/projects/blackjack.html"><img class="project-index" src="/assets/images/black-jack.svg" alt="black jack indexkép"></a>
-              <a href="/projects/blackjack.html"><h3 class="project-title">Black Jack</h3></a>
-              <p class="project-description">
-                A Blackjack egy klasszikus kártyajáték, ahol a 
-                célod, hogy kártyáid összértéke minél közelebb 
-                legyen a 21-hez, anélkül, hogy túllépnéd.
-                A játékban a játékos és az osztó versenyeznek 
-                egymással. HTML, CSS és JavaScript segítségével 
-                készítettem el ezt a játékot: a HTML biztosítja 
-                a struktúrát, a CSS a megjelenést, míg a JavaScript 
-                a játék logikáját és interaktivitását kezeli.
-              </p>
+              <a class="project-link" href="" target=”_blank”><img class="project-index" id="project-index" src="" alt="black jack indexkép"></a>
+              <a class="project-link" href="" target=”_blank”><h3 class="project-title" id="project-title"></h3></a>
+              <p class="project-description" id="project-description"></p>
             </div>
-            <img class="arrow arrow-right" src="/assets/images/arrow-right.svg" alt="jobbra nyíl">
+            <img class="arrow arrow-right" id="game-plus" src="/assets/images/arrow-right.svg" alt="jobbra nyíl">
           </div>
         </div>
       </div>
@@ -186,6 +190,7 @@
     </footer>
 
   </main>
-  
+  <script src="/assets/JS/app.js" defer></script>
+  <script src="/assets/JS/gameChanger.js" defer></script>
 </body>
 </html>

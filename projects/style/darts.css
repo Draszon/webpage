@@ -111,10 +111,9 @@ h3 { font-size: 1.5rem; }
   justify-content:  center;
 }
 
-.player-name-input-wrapper { visibility: visible; display: block; }
 .score-input-wrapper { display: none; }
 
-.input-wrapper input {
+.input-wrapper input, button{
   display: flex;
   flex-direction: column;
   height: 30px;
@@ -130,4 +129,10 @@ h3 { font-size: 1.5rem; }
   border: 1px solid;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.scores li {
+  margin: 5px 0px;
+  font-size: 18px;
+  list-style-type: none;
 }

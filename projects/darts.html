@@ -23,11 +23,11 @@
       <div class="player-score-wrapper">
         <div class="player-one players">
           <span class="player-name" id="first-player"></span>
-          <div class="scores" id="first-player-scores"></div>
+          <div class="scores"><ul id="first-player-scores"></ul></div>
         </div>
         <div class="player-two players">
           <span class="player-name" id="second-player"></span>
-          <div class="scores" id="second-player-scores"></div>
+          <div class="scores"><ul id="second-player-scores"></ul></div>
         </div>
       </div>
       <div class="sum-wrapper">
@@ -35,18 +35,18 @@
         <span class="player-sum" id="s-player-sum"></span>
       </div>
     </div>
-    <form class="player-name-input-wrapper input-wrapper" id="name-input">
+    <div class="player-name-input-wrapper input-wrapper" id="name-input">
       <input type="text" name="first-player-name" id="fplayer" placeholder="1. játékos neve">
       <input type="text" name="second-player-name" id="splayer" placeholder="2. játékos neve">
       <input type="text" name="game-type" id="gametype" placeholder="301 vagy 501">
-      <button type="submit"  id="game-start" disabled>Játék</button>
-    </form>
-    <form class="score-input-wrapper input-wrapper" id="score-input">
-      <input type="text" name="player-first-score" id="pfscore" placeholder="1. dobás eredménye">
-      <input type="text" name="player-second-score" id="psscore" placeholder="2. dobás eredménye">
-      <input type="text" name="player-third-score" id="ptscore" placeholder="3. dobás eredménye">
-      <button type="submit" id="enter-score" disabled>Bevitel</button>
-    </fo>
+      <button id="game-start" disabled>Játék</button>
+    </div>
+    <div  class="score-input-wrapper input-wrapper" id="score-input">
+      <input type="text" name="player-first-score" id="fscore" placeholder="1. dobás eredménye">
+      <input type="text" name="player-second-score" id="sscore" placeholder="2. dobás eredménye">
+      <input type="text" name="player-third-score" id="tscore" placeholder="3. dobás eredménye">
+      <button id="enter-score" disabled>Bevitel</button>
+    </div>
   </div>
 </div>
 
