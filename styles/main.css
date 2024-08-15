@@ -170,7 +170,6 @@ header {
 }
 
 .long-introduction {
-  text-align:   center;
   font-style:   italic;
   line-height:  30px;
 }
@@ -211,10 +210,12 @@ header {
 
 .project-index { height: 12.5rem; }
 
-.js-projects-wrapper { 
+.js-projects-wrapper {
+  height:           600px;
   width:            60%;
   display:          flex;
   justify-content:  center;
+  align-items:      center;
   position:         relative;
   box-shadow:       0 0 50px -18px hsla(228, 18%, 11%, 0.50);
   padding:          3.125rem;

@@ -26,12 +26,12 @@ const games = {
     "Darts"
   ],
   description: [
-    "TicTacToe A Blackjack egy klasszikus kártyajáték, ahol a célod, hogy kártyáid összértéke minél közelebb legyen a 21-hez, anélkül, hogy túllépnéd. A játékban a játékos és az osztó versenyeznek egymással. HTML, CSS és JavaScript segítségével készítettem el ezt a játékot: a HTML biztosítja a struktúrát, a CSS a megjelenést, míg a JavaScript a játék logikáját és interaktivitását kezeli.",
-    "Kő papír olló Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum justo at ex fringilla bibendum. Nullam maximus arcu a volutpat tincidunt.",
-    "Akasztófa Vestibulum ultrices tortor sapien, in luctus est dictum in. Vivamus non aliquet enim. Nunc a vestibulum tortor.",
-    "Black Jack Quisque ornare mi ligula, non eleifend neque luctus at. Mauris lectus mi, luctus bibendum ullamcorper id, tempor eu massa. ",
-    "Legyen ön is milliomos aliquam feugiat nibh non mattis. In egestas erat enim, et pretium dui congue non. Praesent pulvinar tincidunt eros vel rutrum.",
-    "Darts Curabitur semper ligula lacus, sed finibus lacus tristique eget. Etiam et tellus et elit malesuada malesuada.",
+    "A két játékos hagyományosan X és O alakú jelekkel (bábukkal) játszik. A 3×3 mezőből álló táblára felváltva teszik le a jeleiket, bármelyik még szabad mezőre. Az nyer, akinek sikerül egy vonalban 3 jelet elhelyeznie, vízszintes, függőleges vagy átlós irányban. ",
+    "A játékosok hangosan háromig számolnak vagy a játék nevét, a kő – papír – olló-t mondják, minden számolásnál meglendítve a felemelt és ökölbe szorított kezüket. A harmadik számolás közben vagy az utána következő ütemben a játékosok kezükkel felveszik a három alakzat egyikét és megmutatják az ellenfelüknek.",
+    "A találgató játékos javasol egy betűt, mely ha szerepel a kitalálandó szóban, a betű helyének megfelelő vonalakra ráírásra kerül. Amennyiben a betű nem szerepel a kitalálandó szóban, úgy egy stilizált akasztófa egy része kerül lerajzolásra.",
+    "A Blackjack egy klasszikus kártyajáték, ahol a célod, hogy kártyáid összértéke minél közelebb legyen a 21-hez, anélkül, hogy túllépnéd. A játékban a játékos és az osztó versenyeznek egymással.",
+    "A Legyen Ön is Milliomos egy televíziós kvízjáték, műveltségi vetélkedő, amelyben rendkívül magas díjakat nyerhet a játékos, ha jól felel az egymást követő (Magyarországon 15) feleletválasztós kérdésekre.",
+    "Való életben szerzett pontjaidat tudod a táblázatba berögzíteni és a játék típusától függően kiszámolja a két játékos pontjait.",
   ],
   link: [
     "/projects/tictactoe.html",
@@ -56,7 +56,7 @@ change(projectIndex, projectTitle, projectDescription, projectLink, counter);
 
 gamePlus.addEventListener("click", function() {
   counter ++;
-  if(counter > 5) {
+  if(counter > games.indexImg.length -1) {
     counter = 0;
   }
   change(projectIndex, projectTitle, projectDescription, projectLink, counter);
@@ -65,7 +65,7 @@ gamePlus.addEventListener("click", function() {
 gameMinus.addEventListener("click", function() {
   counter --;
   if(counter < 0) {
-    counter = 5;
+    counter = games.indexImg.length - 1;
   }
   change(projectIndex, projectTitle, projectDescription, projectLink, counter);
 });
