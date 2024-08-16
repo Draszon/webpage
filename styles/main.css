@@ -348,4 +348,6 @@ footer {
   .technology-img { width: 80%; }
   .webpage-index { width: 94%; }
   .section-title { line-height: 40px; }
+  .arrow-left {  left: 20px }
+  .arrow-right {  right: 20px }
 }
