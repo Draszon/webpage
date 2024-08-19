@@ -114,10 +114,10 @@ header {
 }
 
 .mobile-menu-btn img {
-  position: fixed;
-  height: 40px;
-  right: 20px;
-  top: 10px;
+  position:   fixed;
+  height:     2.5rem;
+  right:      20px;
+  top:        10px;
 }
 
 /*MOBILE MENU*/

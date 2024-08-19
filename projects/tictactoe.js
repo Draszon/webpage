@@ -11,16 +11,6 @@ let seventh = document.getElementById('span7').innerText;
 let eighth = document.getElementById('span8').innerText;
 let ninth = document.getElementById('span9').innerText;
 
-// számítógép elleni játékhoz ötlet
-// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// function pcMove() {
-//     let random = Math.floor(Math.random() * numbers.length);
-//     console.log('A random szám: ' + random);
-//     console.log('A tömb elemei: ' + numbers);
-//     console.log('A random szám értéke: ' + numbers[random]);
-//     numbers.splice(random, 1);
-// }
-
 let playerX = 0;
 let playerY = 0;
 // ellenőrzi hogy valamelyik lehetséges megoldás teljesült-e
