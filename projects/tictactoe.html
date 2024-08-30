@@ -7,35 +7,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/tictactoe.css" type="text/css">
-    <title>JavaScript gyak</title>
+    <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    
-<div class="wrapper">
-    <div class="title">
-        <h1>TIC TAC TOE</h1>
+
+<div class="container">
+    <div class="table">
+        <div class="row">
+            <div class="field" id="cell1"></div>
+            <div class="field border-field" id="cell2"></div>
+            <div class="field" id="cell3"></div>
+        </div>
+        <div class="row border-row">
+            <div class="field" id="cell4"></div>
+            <div class="field border-field" id="cell5"></div>
+            <div class="field"></div>
+        </div>
+        <div class="row">
+            <div class="field" id="cell7"></div>
+            <div class="field border-field" id="cell8"></div>
+            <div class="field" id="cell9"></div>
+        </div>
     </div>
-    <div class="first-row-wrapper row">
-        <div class="f-first cell" id="cell-1"><span id="span1"></span></div>
-        <div class="f-second cell" id="cell-2"><span id="span2"></span></div>
-        <div class="f-third cell" id="cell-3"><span id="span3"></span></div>
-    </div>
-    <div class="second-row-wrapper row">
-        <div class="s-first cell" id="cell-4"><span id="span4"></span></div>
-        <div class="s-second cell" id="cell-5"><span id="span5"></span></div>
-        <div class="s-third cell" id="cell-6"><span id="span6"></span></div>
-    </div>
-    <div class="third-row-wrapper row">
-        <div class="t-first cell" id="cell-7"><span id="span7"></span></div>
-        <div class="t-second cell" id="cell-8"><span id="span8"></span></div>
-        <div class="t-third cell" id="cell-9"><span id="span9"></span></div>
-    </div>
-    <div class="result">
-        <p>X játékos: <span id="playerX"></span></p><br>
-        <p>Y játékos: <span id="playerY"></span></p><br>
-        <button id="new-game">Új játék</button>
+    <div class="result-wrapper">
+        <p class="errors" id="error-field"></p>
+        <p class="playerX">"X" Játákos: <span id="xp">3</span></p>
+        <p class="playerO">"O" Játákos: <span id="op">5</span></p>
     </div>
 </div>
 
