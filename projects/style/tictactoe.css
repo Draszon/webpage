@@ -1,8 +1,9 @@
 :root {
-    --background-color1: #68EB82;
-    --background-color2: #1aea9a;
+    --background-color1: #5dbb70;
+    --background-color2: #14be7d;
     --font-color: #252525;
     --border-color: #383838;
+    --error-msg-color: #e40000;
 }
 
 * {box-sizing: border-box;}
@@ -57,6 +58,13 @@ body {
     gap: 20px;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size: 30px;
     height: 150px;
+}
+
+.errors {
+    color: var(--error-msg-color);
+    height: 30px;
+
 }
