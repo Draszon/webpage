@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/tictactoe.css" type="text/css">
-    <title>Tic-Tac-Toe</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/tictactoe.css" type="text/css">
+	<title>Tic-Tac-Toe</title>
 </head>
 <body>
 
 <div class="container">
-    <div class="table">
-        <div class="row">
-            <div data-index="0" class="field" id="cell1"></div>
-            <div data-index="1" class="field border-field" id="cell2"></div>
-            <div data-index="2" class="field" id="cell3"></div>
-        </div>
-        <div class="row border-row">
-            <div data-index="3" class="field" id="cell4"></div>
-            <div data-index="4" class="field border-field" id="cell5"></div>
-            <div data-index="5" class="field"></div>
-        </div>
-        <div class="row">
-            <div data-index="6" class="field" id="cell7"></div>
-            <div data-index="7" class="field border-field" id="cell8"></div>
-            <div data-index="8" class="field" id="cell9"></div>
-        </div>
-    </div>
-    <div class="result-wrapper">
-        <p class="playerX">"X" Játákos: <span id="xp"></span></p>
-        <p class="playerO">"O" Játákos: <span id="op"></span></p>
-        <p class="errors" id="error-field"></p>
-    </div>
+	<div class="table">
+		<div class="row">
+			<div data-index="0" class="field" id="cell1"></div>
+			<div data-index="1" class="field border-field" id="cell2"></div>
+			<div data-index="2" class="field" id="cell3"></div>
+		</div>
+		<div class="row border-row">
+			<div data-index="3" class="field" id="cell4"></div>
+			<div data-index="4" class="field border-field" id="cell5"></div>
+			<div data-index="5" class="field"></div>
+		</div>
+		<div class="row">
+			<div data-index="6" class="field" id="cell7"></div>
+			<div data-index="7" class="field border-field" id="cell8"></div>
+			<div data-index="8" class="field" id="cell9"></div>
+		</div>
+	</div>
+	<div class="result-wrapper">
+		<p class="playerX">"X" Játákos: <span id="xp"></span></p>
+		<p class="playerO">"O" Játákos: <span id="op"></span></p>
+		<p class="errors" id="error-field"></p>
+	</div>
 </div>
 
 <script src="tictactoe.js"></script>
