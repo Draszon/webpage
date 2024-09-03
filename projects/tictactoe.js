@@ -5,6 +5,7 @@ const TicTacToe = {
 	errorField: document.getElementById("error-field"),
 	pX: document.getElementById("xp"),
 	pO: document.getElementById("op"),
+	newGameBtn: document.getElementById("new-game"),
 
 	table: Array(9).fill(null),
 
@@ -74,18 +75,22 @@ const TicTacToe = {
 						this.switchPlayer();
 						this.winCheck();
 					} else {
-						this.errorField.innerHTML = "Válassz másik mezőt!";
+						field.style.color = "#e40000";
 						setTimeout(() => {
-							if (this.errorField) {
-								this.errorField.innerHTML = "";
+							if (field) {
+								field.style.color = "#252525";
 							}
-						}, 2000);
+						}, 500);
 					}
 				} else {
 					console.error("Helytelen index: ", index);
 				}
 				
 			});
+		});
+
+		this.newGameBtn.addEventListener("click", () => {
+			this.tableReset();
 		});
 	}
 };
