@@ -1,50 +1,53 @@
 "use strict";
 
-const projectIndex = document.getElementById("project-index");
-const projectTitle = document.getElementById("project-title");
-const projectDescription = document.getElementById("project-description");
-const projectLink = document.querySelector(".project-link");
+const gameChanger = {
+  projectIndex: document.getElementById("project-index"),
+  projectTitle: document.getElementById("project-title"),
+  projectDescription: document.getElementById("project-description"),
+  projectLink: document.querySelector(".project-link"),
 
-const gameMinus = document.getElementById("game-minus");
-const gamePlus = document.getElementById("game-plus");
+  gameMinus: document.getElementById("game-minus"),
+  gamePlus: document.getElementById("game-plus"),
 
-async function loadGames() {
-  try {
-    const response = await fetch("/assets/JS/games.json");
-    const games = await response.json();
+  games: [],
+  counter: 0,
 
-    let counter = 0;
+  change(counters) {
+    this.projectIndex.src = this.games[counters].img;
+    this.projectTitle.innerText = this.games[counters].name;
+    this.projectDescription.innerText = this.games[counters].description;
+    this.projectLink.href = this.games[counters].link;
+  },
 
-    function change(counter) {
-      projectIndex.src = games[counter].img;
-      projectTitle.innerText = games[counter].name;
-      projectDescription.innerText = games[counter].description;
-      projectLink.href = games[counter].link;
+  updateCounter(increment) {
+    this.counter += increment;
+    if (this.counter > this.games.length -1) {
+      this.counter = 0;
+    } else if (this.counter < 0) {
+      this.counter = this.games.length -1
     }
+  },
 
-    function updateCounter(increment) {
-      counter += increment;
-      if (counter > games.length - 1) {
-        counter = 0;
-      } else if (counter < 0) {
-        counter = games.length - 1;
-      }
+  async init() {
+    try {
+      const response = await fetch("/assets/JS/games.json");
+      this.games = await response.json();
+
+      this.change(this.counter);
+
+      this.gamePlus.addEventListener("click", () => {
+        this.updateCounter(1);
+        this.change(this.counter);
+      });
+
+      this.gameMinus.addEventListener("click", () => {
+        this.updateCounter(-1);
+        this.change(this.counter);
+      });
+    } catch (error) {
+      console.log("Hiba: ", error);
     }
-
-    change(counter);
-
-    gamePlus.addEventListener("click", function() {
-      updateCounter(1);
-      change(counter);
-    });
-
-    gameMinus.addEventListener("click", function() {
-      updateCounter(-1);
-      change(counter);
-    });
-  } catch (error) {
-    console.log("Valami hibatörtént: ", error);
   }
-}
+};
 
-loadGames();  
+gameChanger.init();

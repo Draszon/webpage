@@ -1,22 +1,34 @@
 "use strict";
 
-const navOpen = document.getElementById("mobile-nav-open");
-const navClose = document.getElementById("mobile-nav-close");
-const mobileNav = document.getElementById("mobileMenu");
+const mainPage = {
+  navOpen: document.getElementById("mobile-nav-open"),
+  navClose: document.getElementById("mobile-nav-close"),
+  mobileNav: document.getElementById("mobileMenu"),
+  yearFooter: document.getElementById("year"),
+  date: new Date(),
 
-const yearFooter = document.getElementById("year");
+  init() {
+    if (this.navOpen && this.navClose && this.mobileNav) {
+      this.yearFooter.innerHTML = this.date.getFullYear();
 
-navOpen.addEventListener("click", function() {
-  mobileNav.style.height = "200px";
-  navOpen.style.display = "none";
-  navClose.style.display = "block";
+      this.navOpen.addEventListener("click", () => {
+        this.mobileNav.style.height = "200px";
+        this.navOpen.display = "none";
+        this.navClose.style.display = "block";
+      });
+      
+      this.navClose.addEventListener("click", () => {
+        this.mobileNav.style.height = "0";
+        this.navOpen.style.display = "block";
+        this.navClose.style.display = "none";
+      });
+    } else {
+      console.log("Nem lehet betölteni a menüket!");
+    }
+
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  mainPage.init();
 });
-
-navClose.addEventListener("click", function() {
-  mobileNav.style.height = "0";
-  navOpen.style.display = "block";
-  navClose.style.display = "none";
-});
-
-const date = new Date();
-yearFooter.innerHTML = date.getFullYear();

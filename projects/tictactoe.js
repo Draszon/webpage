@@ -64,8 +64,6 @@ const TicTacToe = {
 	init() {
 		this.fields.forEach(field => {
 			field.addEventListener("click", () => {
-				//if (this.currentPlayer === null) return; // További kattintások letiltása ha a játék véget ért
-
 				let index = parseInt(field.dataset.index, 10);
 
 				if (index >= 0 && index < this.table.length) {
