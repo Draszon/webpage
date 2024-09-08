@@ -75,4 +75,4 @@ body {
 
 .player-icons:hover { color: var(--font-color); }
 
-@media (max-width: 375px) { .score-wrapper { width: 60%; }}
+@media (max-width: 425px) { .score-wrapper { width: 60%; }}
