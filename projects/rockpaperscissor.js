@@ -15,10 +15,10 @@ const game = {
         return Math.floor(Math.random() *3);
     },
 
-    pcIconDisplay(pcscore) {
+    pcIconDisplay(pcindex) {
         this.data.pcFields.forEach(field => {
             let index = parseInt(field.dataset.index);
-            if (index === pcscore) {
+            if (index === pcindex) {
                 field.style.color = "hsl(0, 0%, 100%)";
                 field.disabled = true;
                 setTimeout(() => {
@@ -40,15 +40,23 @@ const game = {
             return "Nyertél!";
         }
     },
+
+    pointDisplay() {
+        this.data.playerScoreDisplay.textContent = this.data.playerScore;
+        this.data.pcScoreDisplay.textContent = this.data.pcSore;
+    },
     
     init() {
+        this.pointDisplay();
         this.data.playerFields.forEach(field =>  {
             field.addEventListener("click", () => {
-                this.data.pcSore = this.random();
-                this.data.playerScore = parseInt(field.dataset.index, 10);
-                this.pcIconDisplay(this.data.pcSore);
+                let pcCurrent = this.random();
+                let playerCurrent = parseInt(field.dataset.index, 10);
 
-                this.data.result.textContent = this.winLooseCheck(this.data.playerScore, this.data.pcSore);
+                this.pcIconDisplay(pcCurrent);
+                this.data.result.textContent = this.winLooseCheck(playerCurrent, pcCurrent);
+                
+                this.pointDisplay();
                 setTimeout(() => {
                     this.data.result.textContent = "";
                 }, 500);
