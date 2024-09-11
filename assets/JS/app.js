@@ -28,7 +28,7 @@ const mainPage = {
 
   }
 }
-
+//csak egy komment
 document.addEventListener("DOMContentLoaded", () => {
   mainPage.init();
 });
